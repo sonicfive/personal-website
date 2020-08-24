@@ -1,6 +1,6 @@
 Vue.use(VeeValidate)
 
-new Vue({
+var messages = new Vue({
 
     el: '#message',
 
@@ -8,11 +8,11 @@ new Vue({
 
         return {
 
-            email: 'joe@place.com',
+            email: '',
 
-            message: 'Replace this with your message',
+            message: '',
 
-            name: 'Joe Messager',
+            name: '',
 
             sending: false,
 
@@ -22,8 +22,9 @@ new Vue({
 
     },
 
+
     methods:{
-         
+
         send: function(){
 
             var _this = this
@@ -39,7 +40,7 @@ new Vue({
                     From : this.email,
                     Subject : this.name + " from alexorrantia.com" ,
                     Body : this.message
-                    
+
                 }).then(
 
                   function( data ){
@@ -48,10 +49,44 @@ new Vue({
                     _this.sending = false
 
                   }
-                  
+
                 );
 
             }
+
+        }
+
+    }
+
+})
+
+var medium_posts = new Vue({
+
+    el: '#posts',
+
+    mounted: function(){
+
+        var _this = this
+
+        axios.get('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@alex.orrantia')
+
+        .then( function( data ){
+
+            _this.posts = data.data.items.slice(0,4)
+
+            _this.feed = data.data.feed
+
+        })
+
+    },
+
+    data: function(){
+
+        return {
+
+            posts: [],
+
+            feed: {}
 
         }
 

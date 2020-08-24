@@ -3,7 +3,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Alex Orrantia | Full Stack Developer</title>
-        <meta name="description" content="">
+        <meta name="description" content="Full Stack PHP Web Developer">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
 
@@ -12,7 +12,7 @@
             margin:auto auto;
         }
         </style>
-        
+
         <link href="https://fonts.googleapis.com/css?family=Raleway:500,600&display=swap" rel="stylesheet">
     </head>
     <body class="font-body">
@@ -20,11 +20,11 @@
         <section class="background-svg py-12 sm:py-24 text-white ">
 
             <div class="container mx-auto text-center mb-12 sm:mb-0">
-                
-                   
-                <img class="rounded-full w-48 mx-auto mb-10" src="img/avatar.svg"/>
-        
-            
+
+
+                <img class="rounded-full w-48 mx-auto mb-10" src="https://i.imgur.com/GSxqIJc.pngg"/>
+
+
                 <h1 class="text-4xl mb-5">Hello, I'm <span class="text-pink">Alex Orrantia</span>. <br/>
                     I'm a Full-Stack Web Developer
                 </h1>
@@ -35,12 +35,12 @@
                 </p>
 
                 <!-- <a href="#" class="border-2 text-center text-2xl text-white w-48 px-6 py-3 mt-12 block">
-                    Let's talk 
+                    Let's talk
                     <span>
 
                     </span>
                 </a> -->
-                 
+
             </div>
 
         </section>
@@ -59,7 +59,7 @@
 
                         <p>Businesses can benefit from automating daily tasks by leveraging the use of web applications</p>
                         <p>I have created web applications for the manufacturing industry, helping clients automate quality assurance processes, while solving challenges across devices. </p>
-                    
+
                     </div>
 
                     <div class="md:w-1/3 sm:pr-12 sm:w-full mb-12 sm:bm-0">
@@ -67,11 +67,11 @@
                         <h3 class="text-xl mb-2 sm:mb-12 text-pink ">E-commerce</h3>
 
                         <p>Taking a product based business online can be daunting.</p>
-                        <p>I have helped many businesses succeed by creating custom online store fronts, by both extending 
-                            existing platforms or creating completely custom experiences and paring them with 
+                        <p>I have helped many businesses succeed by creating custom online store fronts, by both extending
+                            existing platforms or creating completely custom experiences and paring them with
                             secure payment gateways.
                         </p>
-                    
+
 
                     </div>
 
@@ -80,12 +80,12 @@
                         <h3 class="text-xl mb-2 sm:mb-12 text-pink">Web Design</h3>
 
                         <p>Your website is the face of your business on the web.</p>
-                        <p>It should not only look clean and professional, but be accesible, work on any device, tell a story and deliver your 
+                        <p>It should not only look clean and professional, but be accesible, work on any device, tell a story and deliver your
                             brand's message. </p>
-                    
+
 
                     </div>
-                
+
                 </div>
 
             </div>
@@ -95,70 +95,112 @@
         <section class=" py-6 sm:py-24 px-6">
 
                 <div class="container mx-auto  ">
-    
+
                     <h2 class="text-4xl text-center mb-12">Technology I Use</h2>
-    
+
                     <div class="sm:flex">
-    
+
                         <div class="md:w-1/3 sm:w-full mb-12 sm:bm-0">
 
                             <img class="w-1/4 pb-6" src="img/laravel.svg"/>
-    
+
                             <h3 class="text-xl mb-2 sm:mb-12 text-pink">Laravel</h3>
 
                             <div class="sm:pr-8">
                                     <p>Laravel is an expressive php web framework. It powers most of the apps I've created.</p>
                             </div>
-    
-                            
+
+
                         </div>
-    
+
                         <div class="md:w-1/3 sm:pr-12 sm:w-full mb-12 sm:bm-0">
 
                             <img class="w-1/4 pb-6" src="img/vue-js.svg"/>
-    
+
                             <h3 class="text-xl mb-2 sm:mb-12 text-pink ">Vue JS / Vuex</h3>
-                            
+
                             <div class="sm:pr-8">
 
                                 <p>Vue Js is an approachable, versatile  Javascript Framework for quickly building
 
-                                    performant frontend apps. Combined with Vuex (state management platform) you can build 
+                                    performant frontend apps. Combined with Vuex (state management platform) you can build
 
                                     ambitious frontend projects.
                                 </p>
 
                             </div>
-    
+
                         </div>
-    
+
                         <div class="md:w-1/3 sm:pr-12 sm:w-full mb-12 sm:bm-0">
 
                             <img class="w-1/4 pb-6" src="img/tailwind.svg"/>
-    
+
                             <h3 class="text-xl mb-2 sm:mb-12 text-pink">Tailwind CSS</h3>
-    
+
                             <div class="sm:pr-8">
 
                                 <p>Vue Js is an approachable, versatile  Javascript Framework for quickly building
 
-                                    performant frontend apps. Combined with Vuex (state management platform) you can build 
+                                    performant frontend apps. Combined with Vuex (state management platform) you can build
 
                                     ambitious projects.
                                 </p>
-    
+
                             </div>
-                        
+
                         </div>
-                    
+
                     </div>
-    
+
                 </div>
-    
+
+        </section>
+
+        <section id="posts" class="py-6 sm:py-24 px-6">
+
+            <div class="container mx-auto">
+
+                <h2 class="text-4xl text-center mb-12">Blog Posts</h2>
+
+
+
+                <div class="sm:flex">
+
+                        <div v-for="post in posts" class="md:w-1/2 sm:w-full mb-12 sm:bm-0 pr-8">
+
+                            <div class="h-48 bg-center bg-contain mb-8" :style="{ backgroundImage: 'url(\'' + post.thumbnail + '\')' }">
+
+
+                            </div>
+                            <!-- <img class="w-1/4 pb-6" :src="post.thumbnail"/> -->
+
+                            <h3 class="text-l mb-2 sm:mb-2 text-pink">
+                                            {{ post.title }}
+                            </h3>
+
+                            <div class="mb-2 sm:mb-12 flex">
+
+                                    <a class="underline"  :href="post.link">
+
+                                                read more
+
+                                    </a>
+
+
+
+                            </div>
+
+                        </div>
+
+                </div>
+
+            </div>
+
         </section>
 
         <section class="py-6 px-4">
-        
+
             <div id="message" class="container font-size mx-auto">
 
                 <h2 class="text-4xl text-pink">Let's discuss some collaboration?</h2>
@@ -174,9 +216,9 @@
                 </div>
 
                 <form v-if="!sent" class="mt-12">
-                    
+
                     <img id="load" v-if="sending && !sent" :class="{'opacity-100' : sending, 'opacity-0' : !sending }" src="img/load.svg"/>
-                    
+
                     <div v-if="!sending" class="wrap" :class="{'opacity-0': sending }">
 
                     <div class="flex flex-row mb-8">
@@ -209,7 +251,7 @@
                         <label class="block mb-2 uppercase font-semibold text-sm">Message</label>
 
                         <textarea v-model="message" name="message"  v-validate="'required'"  class="block w-full shadow h-24 rounded-lg p-2"></textarea>
-                        
+
                         <div v-show="errors.has('message')" class="text-pink pt-2 text-sm">{{ errors.first('message') }}</div>
 
                         </div>
@@ -217,11 +259,11 @@
                     <div class="flex flex-row">
                         <div class="text-white">
                             <a @click="send()" :disabled="errors.any()" class=" mt-8 shadow flex border-0 text-white bg-pink py-3 px-3  ">
-                                
+
                                 Send
 
                             </a>
-                            
+
                         </div>
                     </div>
 
@@ -230,11 +272,11 @@
             </div>
         </section>
         <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script src="js/vue.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js" integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous"></script>
         <script src="js/vee-validate.js"></script>
         <script src="js/main.js"></script>
 
+
     </body>
     </html>
-
-    

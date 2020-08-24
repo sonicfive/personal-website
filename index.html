@@ -5,7 +5,7 @@
         <title>Alex Orrantia | Full Stack Developer</title>
         <meta name="description" content="Full Stack PHP Web Developer">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
 
         <style>
         #load{
@@ -17,7 +17,7 @@
     </head>
     <body class="font-body">
 
-        <section class="background-svg py-12 sm:py-24 text-white ">
+        <section class="py-12 sm:py-24 text-white " style="background:url(img/desert-bg.jpg)">
 
             <div class="container mx-auto text-center mb-12 sm:mb-0">
 
@@ -25,7 +25,7 @@
                 <img class="rounded-full w-48 mx-auto mb-10" src="https://i.imgur.com/GSxqIJc.pngg"/>
 
 
-                <h1 class="text-4xl mb-5">Hello, I'm <span class="text-pink">Alex Orrantia</span>. <br/>
+                <h1 class="text-4xl mb-5 text-white">Hello, I'm <span class="bg-white text-pink p-2">Alex Orrantia</span> <br/>
                     I'm a Full-Stack Web Developer
                 </h1>
 
@@ -157,17 +157,19 @@
 
         </section>
 
-        <section id="posts" class="py-6 sm:py-24 px-6">
+        <section id="posts" class="py-6 sm:py-24 px-6 bg-black-100">
 
             <div class="container mx-auto">
 
-                <h2 class="text-4xl text-center mb-12">Blog Posts</h2>
+                <h2 class="text-4xl text-center mb-12">Latest Blog Posts</h2>
+                <p class="text-center md:pb-8 px-4">From time to time I contribute to the web developer community by writing content related to the projects that I may be currently working on, at the moment I am working on a series that
+                touches on aspects related to creating dashboards using Laravel PHP. All of these posts are the lastest ones pulled directly from my profile at <a class="text-pink" href="https://medium.com/@alex.orrantia">medium.com</a></p>
 
 
 
                 <div class="sm:flex">
 
-                        <div v-for="post in posts" class="md:w-1/2 sm:w-full mb-12 sm:bm-0 pr-8">
+                        <div v-for="post in posts" class="md:w-1/2 sm:w-full mb-12 sm:bm-0 p-4 mx-4 border border-black-100 bg-white shadow-md">
 
                             <div class="h-48 bg-center bg-contain mb-8" :style="{ backgroundImage: 'url(\'' + post.thumbnail + '\')' }">
 
@@ -179,9 +181,9 @@
                                             {{ post.title }}
                             </h3>
 
-                            <div class="mb-2 sm:mb-12 flex">
+                            <div class="mb-2 flex">
 
-                                    <a class="underline"  :href="post.link">
+                                    <a class="underline text-sm hover:text-pink"  :href="post.link">
 
                                                 read more
 
@@ -199,7 +201,7 @@
 
         </section>
 
-        <section class="py-6 px-4">
+        <section class="sm:py-8 md:py-12 px-4">
 
             <div id="message" class="container font-size mx-auto">
 

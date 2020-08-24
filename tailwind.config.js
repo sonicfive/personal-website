@@ -11,6 +11,7 @@ module.exports = {
         100: '#EDF2F7',
         200: '#666666',
         300: '#888888',
+        400: '#DDDDDD'
       }
     },
     fontFamily: {

@@ -157,7 +157,7 @@
 
         </section>
 
-        <section id="posts" class="py-6 sm:py-24 px-6">
+        <section id="posts" class="py-6 sm:py-24 px-6 bg-black-100">
 
             <div class="container mx-auto">
 
@@ -167,7 +167,7 @@
 
                 <div class="sm:flex">
 
-                        <div v-for="post in posts" class="md:w-1/2 sm:w-full mb-12 sm:bm-0 pr-8">
+                        <div v-for="post in posts" class="md:w-1/2 sm:w-full mb-12 sm:bm-0 p-4 mx-4 border border-black-100 bg-white shadow-md">
 
                             <div class="h-48 bg-center bg-contain mb-8" :style="{ backgroundImage: 'url(\'' + post.thumbnail + '\')' }">
 
@@ -179,9 +179,9 @@
                                             {{ post.title }}
                             </h3>
 
-                            <div class="mb-2 sm:mb-12 flex">
+                            <div class="mb-2 flex">
 
-                                    <a class="underline"  :href="post.link">
+                                    <a class="underline text-sm hover:text-pink"  :href="post.link">
 
                                                 read more
 

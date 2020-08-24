@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "postcss tailwind.css -o styles.css",
+    "watch": "watch 'npm run build' ./"
   },
   "author": "Alex Orrantia",
   "license": "ISC",
@@ -11,6 +12,12 @@
     "tailwindcss": "1.0.4",
     "vee-validate": "2.2.12",
     "vue": "2.6.10",
-    "vuejs": "3.0.1"
+    "vuejs": "3.0.1",
+    "@fullhuman/postcss-purgecss": "2.1.0",
+    "autoprefixer": "9.7.4",
+    "cssnano": "4.1.10",
+    "postcss-cli": "7.1.0",
+    "uglify-js": "3.10.0",
+    "watch": "1.0.2"
   }
 }

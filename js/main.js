@@ -72,7 +72,9 @@ var medium_posts = new Vue({
 
         .then( function( data ){
 
-            _this.posts = data.data.items.slice(0,4)
+            // _this.posts = data.data.items
+
+              _this.posts = data.data.items.slice(0,9)
 
             _this.feed = data.data.feed
 

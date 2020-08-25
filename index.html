@@ -162,20 +162,19 @@
             <div class="container mx-auto">
 
                 <h2 class="text-4xl text-center mb-12">Latest Blog Posts</h2>
-                <p class="text-center md:pb-8 px-4">From time to time I contribute to the web developer community by writing content related to the projects that I may be currently working on, at the moment I am working on a series that
+                <p class="text-center px-4">From time to time I contribute to the web developer community by writing content related to the projects that I may be currently working on, at the moment I am working on a series that
                 touches on aspects related to creating dashboards using Laravel PHP. All of these posts are the lastest ones pulled directly from my profile at <a class="text-pink" href="https://medium.com/@alex.orrantia">medium.com</a></p>
 
 
 
-                <div class="sm:flex">
+                <div class="sm:flex sm:flex-wrap mt-8 sm:mt-12">
 
-                        <div v-for="post in posts" class="md:w-1/2 sm:w-full mb-12 sm:bm-0 p-4 mx-4 border border-black-100 bg-white shadow-md">
+                        <div v-for="post in posts" class="md:w-1/4 flex-auto mx-4 sm:w-full mb-12 sm:bm-0 p-4  bg-white shadow-md">
 
-                            <div class="h-48 bg-center bg-contain mb-8" :style="{ backgroundImage: 'url(\'' + post.thumbnail + '\')' }">
+                            <div class="h-48 bg-center bg-cover mb-8" :style="{ backgroundImage: 'url(\'' + post.thumbnail + '\')' }">
 
 
                             </div>
-                            <!-- <img class="w-1/4 pb-6" :src="post.thumbnail"/> -->
 
                             <h3 class="text-l mb-2 sm:mb-2 text-pink">
                                             {{ post.title }}

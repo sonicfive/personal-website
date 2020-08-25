@@ -167,11 +167,11 @@
 
 
 
-                <div class="sm:flex">
+                <div class="sm:flex sm:flex-wrap">
 
-                        <div v-for="post in posts" class="md:w-1/2 sm:w-full mb-12 sm:bm-0 p-4 mx-4 border border-black-100 bg-white shadow-md">
+                        <div v-for="post in posts" class="md:w-1/4 flex-auto mx-4 sm:w-full mb-12 sm:bm-0 p-4  bg-white shadow-md">
 
-                            <div class="h-48 bg-center bg-contain mb-8" :style="{ backgroundImage: 'url(\'' + post.thumbnail + '\')' }">
+                            <div class="h-48 bg-center bg-cover mb-8" :style="{ backgroundImage: 'url(\'' + post.thumbnail + '\')' }">
 
 
                             </div>

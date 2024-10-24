@@ -11,7 +11,7 @@
   "dependencies": {
     "tailwindcss": "1.0.4",
     "vee-validate": "2.2.12",
-    "vue": "2.6.10",
+    "vue": "3.0.0",
     "vuejs": "3.0.1",
     "@fullhuman/postcss-purgecss": "2.1.0",
     "autoprefixer": "9.7.4",
